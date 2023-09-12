@@ -7,11 +7,12 @@ urlpatterns = [
     path('',inicio, name="Inicio"),
     path('cursos/',cursos, name="Cursos"),
     path('profesores/',profesores, name="Profesores"),
-    path('estudiantes/',estudiantes, name="Estudiantes"),
     path('entregables/',entregables, name="Entregables"),
     path('cursoFormularios/', cursoFormulario, name="cursoFormularios"),
     path('guardarProfesor/', guardarProfesor, name="guardarProfesor"),
     path('busqueda-curso/', busquedaCurso, name="busqueda-curso"),
-   
+    path('Buscando/', buscar, name="Buscando"),
+    path('crearestudiante/', creaEstudiante, name="crearestudiante"),
+    path('entregar-trabajo/', crear_entregable, name="entregar-trabajo"),
 
 ]

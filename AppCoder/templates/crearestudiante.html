@@ -1,11 +1,11 @@
 {% extends 'padre.html' %}
 
 {% block contenidoQueCambia %}
-<h1>Registrar Profesor</h1>
+<h1>Registrar Estudiante</h1>
 <br>
-<form action="{% url 'guardarProfesor' %}" method="post">{% csrf_token %}
+<form action="{% url 'crearestudiante' %}" method="post">{% csrf_token %}
 
-    <p style="position: relative; left: 700px">{{miformulario.as_p}}</p>
+    {{miformulario2.as_p}}
 
     <button style="position: relative; left: 100px;"> Enviar </button>
 </form>

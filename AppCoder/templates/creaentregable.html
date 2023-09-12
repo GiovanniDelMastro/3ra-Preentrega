@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+<h1>Entregar Trabajo</h1>
+<br>
+<form action="{% url 'crearestudiante' %}" method="post">{% csrf_token %}
+
+    {{miformulario2.as_p}}
+
+    <button style="position: relative; left: 100px;"> Entregar </button>
+</form>
+<br>
+<br>   
+{% endblock contenidoQueCambia %}
