@@ -55,7 +55,7 @@ def guardarProfesor(req):
             profesores.save()
         return render(req, 'exitogprofesor.html')
     else:
-        miFormulario = Profesorguardar(req.POST)
+        miFormulario = Profesorguardar()
         return render(req, 'guardarprofesor.html', {"miformulario": miFormulario})    
     
 def busquedaCurso(req):
@@ -84,7 +84,7 @@ def creaEstudiante(req):
             estudiante.save()
         return render(req, 'estudianteguardado.html')
     else:
-        miFormulario2 = Estudiantesguardar(req.POST)
+        miFormulario2 = Estudiantesguardar()
         return render(req, 'crearestudiante.html', {"miformulario2": miFormulario2})  
      
 def crear_entregable(req):
@@ -94,11 +94,11 @@ def crear_entregable(req):
         miFormulario2 = GuardarEntregable(req.POST)
         if miFormulario2.is_valid():
             data = miFormulario2.cleaned_data
-            entregable = Entregable(nombre=data["nombre"], fecha=data["fecha"], email=data["email"], entregado=data["entregado"], link=data["link"])
+            entregable = Entregable(nombre=data["nombre"], fecha=data["fechadeentrega"], email=data["email"], entregado=data["entregado"], link=data["link"])
             entregable.save()
         return render(req, 'Entregado.html')
     else:
-        miFormulario2 = GuardarEntregable(req.POST)
+        miFormulario2 = GuardarEntregable()
         return render(req, 'creaentregable.html', {"miformulario2": miFormulario2}) 
         
 
