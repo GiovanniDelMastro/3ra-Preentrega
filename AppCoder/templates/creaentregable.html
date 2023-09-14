@@ -3,7 +3,7 @@
 {% block contenidoQueCambia %}
 <h1>Entregar Trabajo</h1>
 <br>
-<form action="{% url 'crearestudiante' %}" method="post">{% csrf_token %}
+<form action="{% url 'entregar-trabajo' %}" method="post">{% csrf_token %}
 
     {{miformulario2.as_p}}
 
